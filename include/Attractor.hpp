@@ -3,7 +3,7 @@
 
 #define GLM_FORCE_RADIANS
 
-#include <glm\glm.hpp>
+#include <glm/glm.hpp>
 
 #include "Camera.hpp"
 #include "GLFWInput.hpp"
@@ -37,6 +37,7 @@ public:
     }
     
     if(input.isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT)){
+        //std::puts("here");
       _active = true;
     } else {
       _active = false;

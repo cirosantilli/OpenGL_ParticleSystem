@@ -8,12 +8,12 @@ src/ShaderManager.o \
 src/gl3w.o \
 src/tga.o
 
-CC=gcc
+CC=g++
 #GDB=-g
 
 CPPFLAGS= -std=c++14 -Iinclude/ -Wall -s -O3
 CFLAGS = -Iinclude/ -Wall -s
-LFLAGS=-lglfw3 -lopengl32 -lgdi32 -lstdc++
+LFLAGS=-lglfw3 -lGL -lm -ldl
 
 all: src/main.cpp $(OBJECTS)
 	$(CC) $(GDB) $(CPPFLAGS) -o $(TARGETS) $< $(OBJECTS) $(LFLAGS)
@@ -25,5 +25,5 @@ all: src/main.cpp $(OBJECTS)
 	$(CC) $(GDB) $(CFLAGS) -c $< -o $@
 	
 clean:
-	del $(subst /,\,$(OBJECTS))
-	del $(subst /,\,$(TARGETS))
+	rm -f $(subst /,\,$(OBJECTS))
+	rm -f $(subst /,\,$(TARGETS))
