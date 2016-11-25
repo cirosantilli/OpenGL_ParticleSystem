@@ -8,7 +8,7 @@ src/ShaderManager.o \
 src/gl3w.o \
 src/tga.o
 
-CC=g++
+CC=g++ -fpermissive
 #GDB=-g
 
 CPPFLAGS= -std=c++14 -Iinclude/ -Wall -s -O3

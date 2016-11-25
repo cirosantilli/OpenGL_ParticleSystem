@@ -37,7 +37,6 @@ public:
     }
     
     if(input.isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT)){
-        //std::puts("here");
       _active = true;
     } else {
       _active = false;
